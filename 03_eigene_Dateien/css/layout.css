@@ -1,0 +1,26 @@
+/* Textselector */
+p{
+    color: red;
+    text-align: justify;
+    /* left, right, center, justify */
+}
+
+h1, h2, h3{
+    color: blue;
+}
+
+/* Klassenselector */
+/* HTML: class CSS: . */
+.wichtig{
+    font-size: 20px;
+    /*font-size values: px, pt, %, em
+    eher relative größen wie % oder em wählen*/
+}
+
+/* ID-Selector */ 
+/* HTML: id CSS: # */
+#meinAbsatz{
+    color: green;
+    font-weight: bold;
+}
+

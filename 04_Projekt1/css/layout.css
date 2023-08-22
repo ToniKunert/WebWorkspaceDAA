@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(49, 49, 49);
+}
+
+h1 {
+    color: green;
+    text-align: center;
+}
+
+h1::first-letter {
+    color: red;
+    border: 1px solid red;
+    font-size: 1.5em;
+}
+
+h2 {
+    letter-spacing: 0.1em;
+}
+
+h2,
+h3 {
+    color: white;
+}
+
+/* Navigation-Links, besuchter Link */
+
+/* Sonderregeln für a:visited? Link von Frau Tullius geben lassen */
+a.navi,
+a:visited {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: green;
+    /* Rahmen: dicke, linienart, farbe */
+    border: 1px solid black;
+    color: rgb(206, 206, 206);
+    /* Strich unter Link entfernen */
+    text-decoration: none;
+    /* Innenabstand - padding */
+    padding: 10px 20px;
+    /* Außenabstand - margin */
+    margin: 10px;
+}
+
+/* wenn Maus über Link */
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* wenn Maustaste gedrückt ist */
+a:active {
+    background-color: gray;
+    color: white;
+}
+
+a.aktuell {
+    border: 1px solid red;
+}

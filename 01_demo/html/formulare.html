@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularelemente</title>
+    <style>
+        form{
+            border: 1px solid black;
+        }
+
+        label{
+            display: block;
+        }
+
+        .inline{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- action - datei an die gesendet werden soll, serverseitige Auswertung machen-->
+    <!-- method get/post get- Daten an die URL gehängt, post - "unsichtbar"-->
+    <!-- POST ist immer vorzuziehen!!! GET nur in Ausnahmefällen (Bookmark)-->
+    <!-- wird attribut method nicht vergeben wird automatisch per GET übertragen-->
+
+    <!-- attribut name dient zur späteren Auswertung mit PHP
+    css/ js Zugriff über ID - bei PHP wird name benötigt -->
+    <form action="#" method="get">
+        <label for="vorname">Vorname:</label>
+        <!-- Attribut name benötigt für die Auswertung-->
+        <input type="text" name="vorname" id="vorname" placeholder="Max">
+        <label for="geheim">Passwort:</label>
+        <input type="password" name="geheim" id="geheim">
+        <label for="mail">Mailadresse:</label>
+        <!-- prüft in Ansätze, ob es eine Mailadresse ein könnte (Aufbau z.B. @)-->
+        <!-- ACHTUNG: keine Prüfung, ob Adresse existiert!!!-->
+        <input type="email" name="mail" id="mail" placeholder="info@test.de">
+        <label for="geburstag">Geburtsdatum:</label>
+        <input type="date" name="geburstag" id="geburstag" >
+        <label for="farbe">Farbe:</label>
+        <input type="color" name="farbe" id="farbe">
+
+        <label for="geschlecht">Geschlecht:</label>
+        <!-- single-choice / einfachauswahl -->
+        <!-- müssen alle gleichen "name" haben, ID muss sich unterscheiden, value muss vergeben sein (spätere Auswertung)-->
+        <!-- checked = ausgewählt-->
+
+        <input type="radio" name="geschlecht" id="g1" value="w"><span>weiblich</span>
+        <input type="radio" name="geschlecht" id="g2" value="m" checked><span>männlich</span>
+        <input type="radio" name="geschlecht" id="g3" value="d"><span>divers</span>
+
+        <label for="erfahrung">Vorerfahrungen:</label>
+           <!-- multiple-choice / mehrfachauswahl -->
+        <!-- müssen alle gleichen "name" haben, ID muss sich unterscheiden, value muss vergeben sein (spätere Auswertung)-->
+        <label class="inline" for="e1"><input type="checkbox" name="erfahrung" id="e1" value="prog" checked>Programmierung</label>
+        <label class="inline" for="e2"><input type="checkbox" name="erfahrung" id="e2" value="nw">Netzwerke</label>
+        <label class="inline" for="e3"><input type="checkbox" name="erfahrung" id="e3" value="kauf">Kaufm.</label>
+        <label for="ausbildung">Ausbildung:</label>
+        <!-- size = sichtbare einträge-->
+        <select name="ausbildung" id="ausbildung"  size="1">
+            <option value="awe">AWE</option>
+            <option value="fisi" selected>FISI</option>
+            <option value="sonstiges">sonstiges</option>
+        </select>
+        <label for="nachricht">Ihre Nachricht:</label>
+        <!-- maxlength begrenzt Eingabe der Zeichen
+        statt cols/ rows besser width / height in CSS-->
+        <textarea name="nachricht" id="nachricht" maxlength="50"></textarea>
+
+     
+
+        <label for="zahl">Lieblingszahl:</label>
+        <input type="number" name="zahl" id="zahl" min="10" max="20" step="2">
+
+        <br>
+        <input type="submit" value="Absenden">
+        <input type="reset" value="Formular leeren">
+    </form>
+
+
+</body>
+</html>

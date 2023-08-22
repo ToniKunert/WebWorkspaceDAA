@@ -1,0 +1,50 @@
+tr,
+th,
+td {
+    border: 1px solid black;
+}
+
+.gray_background {
+    background-color: gray;
+    color: white;
+}
+
+
+.tab_1 {
+    text-align: center;
+    border: 5px solid orange;
+}
+
+.tab_1 th {
+    padding: 0px 20px;
+}
+
+.blue_background {
+    background-color: blue;
+    color: white;
+}
+
+#Orga {
+    background-color: orange;
+    color: white;
+}
+
+
+.tab_2 {
+    text-align: center;
+}
+
+
+.tab_3 {
+    text-align: center;
+    border: 2px solid black;
+}
+
+#sport {
+    background-color: green;
+    color: white;
+}
+
+#lebensmittel {
+    background-color: orange;
+}

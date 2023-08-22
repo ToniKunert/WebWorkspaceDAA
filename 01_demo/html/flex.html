@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 99%;
+        }
+
+        div {
+            border: 1px solid black;
+            flex: 1;
+            margin: 3px;
+        }
+
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #reihe4,
+        #reihe2 {
+            display: flex;
+            flex-direction: row;
+            flex: 3
+        }
+
+        #reihe1 {
+            background-color: yellow;
+        }
+
+        #reihe2 {
+            background-color: orange;
+        }
+
+        #reihe3 {
+            /* flex: 2; */
+            background-color: red;
+        }
+
+        #reihe4 {
+            background-color: aqua;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex2 {
+            flex: 2;
+        }
+
+        .punkte {
+            border: 5px dotted green;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="reihe1">1</div>
+        <div id="reihe2">
+            <div class="column punkte">
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <div>5</div>
+            <div class="column">
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+            </div>
+        </div>
+        <div id="reihe3" class="flex2">9</div>
+        <div id="reihe4">
+            <div id="r4l" class="flex2">10</div>
+            <div>11</div>
+        </div>
+    </div>
+</body>
+
+</html>

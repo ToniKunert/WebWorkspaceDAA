@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listen</title>
+    <style>
+        ul{
+            /* disc gefüllter Kreis, square rechteck, circle ungefüllter Kreis */
+            list-style-type: circle;
+        }
+
+        /* die liste in der liste der liste */
+        ul ul ul{
+            list-style-type: disc;
+        }
+
+        .innereListe{
+            list-style-image: url(../bilder/top_icon.png);
+        }
+
+        ol ol{
+            list-style-type: upper-alpha;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ol steht für sortierte Liste-->
+    <ol>
+        <!-- li für jeden Listeneintrag-->
+        <li>Montag</li>
+        <ol>
+            <li>Vormittag</li>
+            <ul>
+                <li>10 Uhr</li>
+                <li>12 Uhr</li>
+            </ul>
+            <li>Nachmittag</li>
+        </ol>
+        <li>Dienstag</li>
+        <li>Mittwoch</li>
+    </ol>
+ 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus id incidunt asperiores earum voluptatibus debitis optio consectetur labore hic fugit numquam illum suscipit reiciendis, odit magnam nulla expedita fuga qui!</p>
+ 
+    <ol start="4">
+        <li>Donnerstag</li>
+        <li>Freitag</li>
+    </ol>
+ 
+    <!-- ul unsortierte Liste-->
+    <ul>
+        <li>Hund</li>
+            <ul>
+                <li>kleine Hunde</li>
+                <ul>
+                    <li>Dackel</li>
+                    <ul class="innereListe">
+                        <li>Rauhaardackel</li>
+                        <li>andere Dackel</li>
+                    </ul>
+                    <li>Pudel</li>
+                </ul>    
+                <li>grosse Hunde</li>
+            </ul>
+        <li>Katze</li>
+        <li>Maus</li>
+    </ul>
+
+</body>
+</html>
